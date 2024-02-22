@@ -8,6 +8,7 @@ import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedBy;
 import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.time.LocalDateTime;
 import java.util.LinkedHashSet;
@@ -22,6 +23,7 @@ import java.util.Set;
         @Index(columnList = "createdAt"),
         @Index(columnList = "createdBy")
 })
+@EntityListeners(AuditingEntityListener.class) // Auditing을 활성화 해주는 어노테이션
 @Entity
 public class Article {
     @Id
@@ -84,6 +86,7 @@ public class Article {
         if (!(o instanceof Article article)) return false;
         return id != null && id.equals(article.id);
     }
+
 
     @Override
     public int hashCode() {

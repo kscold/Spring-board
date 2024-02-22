@@ -31,13 +31,14 @@ class JpaRepositoryTest {
     @Test
     void givenTestData_whenSelecting_thenWorksFine() {
         // Given
+        long previousCount = articleRepository.count(); // 총 테스트 데이터의 갯수 반환
 
         // When
-        List<Article> articles = articleRepository.findAll();
+        Article savedArticle = articleRepository.save(Article.of("new article", "new content", "#spring")); // 하나의 임의의 데이터를 넣음
 
         // Then
-        assertThat(articles)
-                .isNotNull()
-                .hasSize(123);
+        assertThat(articleRepository.count())
+                .isEqualTo(previousCount + 1); // 하나 더해서 총 124개를 확인
+
     }
 }
