@@ -40,10 +40,10 @@ spring:
 
 --- # yaml 파일은 새로운 document 생성할 수 있음
 
-spring:
-  config:
-    activate:
-      on-cloud-platform: None
+#spring:
+#  config:
+#    activate:
+#      on-cloud-platform: testdb
 #  datasource:
 #    url: jdbc:h2:mem:board;mode=mysql
 #    driver-class-name: org.h2.Driver
