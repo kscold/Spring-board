@@ -30,6 +30,8 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-rest'
     implementation 'org.springframework.data:spring-data-rest-hal-explorer' // api를 테스트할 수 있음
 
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+
     runtimeOnly 'com.h2database:h2'
     runtimeOnly 'com.mysql:mysql-connector-j'
 
