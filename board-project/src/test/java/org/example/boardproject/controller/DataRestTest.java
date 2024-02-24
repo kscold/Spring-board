@@ -1,5 +1,6 @@
 package org.example.boardproject.controller;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +15,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 // @WebMvcTest // 이 상태로 테스트를 진행하면 @Autowired가 일어나지 않기 때문에 테스트가 실패함
+@Disabled("Spring Data REST 통합테스트는 불필요하므로 제외시킴") // 너무 무거워서 제외
 @DisplayName("Data REST - API 테스트")
 @Transactional // 이 어노테이션을 붙이지 않으면 DB에 영향을 주는 테스트이므로 붙여줌, Rollback이 가능해짐
 @AutoConfigureMockMvc // mock MVC라는 것을 알려주는 어노테이션
