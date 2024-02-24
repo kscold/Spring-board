@@ -32,14 +32,20 @@ spring:
       hibernate:
         format_sql: true # 한줄로 나와야되는 디버그 쿼리문을 이쁘게 포맷팅 해줌
         default_batch_fetch_size: 100 # jpa에서 복잡한 연관관계 매핑이 되어있는 쿼리를 사용할 때 한번에 벌크로 조인할 수 있게(n+1) 문제를 해결
-  #  h2:
-  #    console:
-  #      enabled: true # 인메모리 데이터 베이스로 h2 DB를 사용할지 설정, 기본값이 false 이므로 외부 DB를 사용하기 위해 주석
   sql:
     init:
       mode: always # data.sql를 언제 작동시킬지 rule를 정하는 설정
+  data:
+    rest:
+      base-path: /api # 기본 api 패스 설정
+      detection-strategy: annotated # 기본값은 default 어노테이션을 지정한 곳만 리파지터리를 생성
+
+  #  h2:
+  #    console:
+  #      enabled: true # 인메모리 데이터 베이스로 h2 DB를 사용할지 설정, 기본값이 false 이므로 외부 DB를 사용하기 위해 주석
   #  thymeleaf:
   #    cache: false
+
 
 --- # yaml 파일은 새로운 document 생성할 수 있음
 
