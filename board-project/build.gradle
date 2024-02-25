@@ -36,7 +36,7 @@ dependencies {
     runtimeOnly 'com.mysql:mysql-connector-j'
 
     compileOnly 'org.projectlombok:lombok'
-    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools' // 자동적으로 변경사항을 인식할 수 있도록 재실행
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 

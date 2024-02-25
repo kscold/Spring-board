@@ -2,9 +2,7 @@ package org.example.boardproject.repository;
 
 import com.querydsl.core.types.dsl.DateTimeExpression;
 import com.querydsl.core.types.dsl.StringExpression;
-import org.example.boardproject.domain.Article;
 import org.example.boardproject.domain.ArticleComment;
-import org.example.boardproject.domain.QArticle;
 import org.example.boardproject.domain.QArticleComment;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.querydsl.QuerydslPredicateExecutor;
