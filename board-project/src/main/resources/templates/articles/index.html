@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko" xml:th="http://www.thymeleaf.org"> <!-- 타임리프 설정을 위해 명시 -->
+<!--<html lang="ko" xml:th="http://www.thymeleaf.org"> &lt;!&ndash; 타임리프 설정을 위해 명시 &ndash;&gt;-->
 
     <head>
         <meta charset="UTF-8">
@@ -7,8 +7,8 @@
     </head>
 
     <body>
-        <header th:replace="header :: header"></header> <!-- 그냥 클래스로 접근 가능 -->
-
+        <!-- <header th:replace="header :: header"></header> &lt;!&ndash; 그냥 클래스로 접근 가능 &ndash;&gt;-->
+        <header></header>
         <main>
             <form>
                 <label for="search-type" hidden>유형</label>
@@ -75,6 +75,7 @@
             </nav>
         </main>
 
-        <footer th:replace="footer :: footer"></footer>
+        <footer></footer>
+        <!-- <footer th:replace="footer :: footer"></footer>-->
     </body>
 </html>
