@@ -30,7 +30,9 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-rest'
     implementation 'org.springframework.data:spring-data-rest-hal-explorer' // api를 테스트할 수 있음
 
-    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf' // thymeleaf 추가
+
+//    implementation 'org.springframework.boot:spring-boot-starter-webflux' // React 추가
 
     runtimeOnly 'com.h2database:h2'
     runtimeOnly 'com.mysql:mysql-connector-j'
@@ -38,6 +40,7 @@ dependencies {
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools' // 자동적으로 변경사항을 인식할 수 있도록 재실행
     annotationProcessor 'org.projectlombok:lombok'
+    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor' // 타임리프 id를 좀 더 매끄럽게 사용하기 위해 설정
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
     // queryDSL 스프링 3.0 설정
