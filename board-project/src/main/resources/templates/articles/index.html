@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" xml:th="http://www.thymeleaf.org"> <!-- 타임리프 설정을 위해 명시 -->
 <head>
     <meta charset="UTF-8">
     <title>게시판 페이지</title>
 </head>
 <body>
-<header>
-    header 삽입부
-    <hr>
-</header>
+<header th:replace="header :: header">  <!-- 그냥 클래스로 접근 가능 -->
 
+</header>
 <main>
     <form>
         <label for="search-type" hidden>유형</label>
@@ -76,9 +74,6 @@
     </nav>
 </main>
 
-<footer>
-    <hr>
-    푸터
-</footer>
+<footer th:replace="footer :: footer"></footer>
 </body>
 </html>
