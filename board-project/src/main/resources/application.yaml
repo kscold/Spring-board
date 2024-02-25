@@ -39,7 +39,8 @@ spring:
     rest:
       base-path: /api # 기본 api 패스 설정
       detection-strategy: annotated # 기본값은 default 어노테이션을 지정한 곳만 리파지터리를 생성
-
+  thymeleaf3:
+    decoupled-logic: true
   #  h2:
   #    console:
   #      enabled: true # 인메모리 데이터 베이스로 h2 DB를 사용할지 설정, 기본값이 false 이므로 외부 DB를 사용하기 위해 주석
